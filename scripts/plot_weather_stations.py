@@ -20,7 +20,12 @@ def plot_weather_stations():
 
     for station, (lat, lon) in weather_stations.items():
         ax.plot(lon, lat, marker='o', color='red', markersize=8, transform=ccrs.PlateCarree())
-        ax.text(lon + 0.1, lat, station, transform=ccrs.PlateCarree(), fontsize=12, verticalalignment='center')
+        if station == 'Cork Airport':
+            ax.text(lon + 0.1, lat - 0.1, station, transform=ccrs.PlateCarree(), fontsize=12, verticalalignment='center')
+        elif station == 'Roches Point':
+            ax.text(lon + 0.1, lat + 0.1, station, transform=ccrs.PlateCarree(), fontsize=12, verticalalignment='center')
+        else:
+            ax.text(lon + 0.1, lat, station, transform=ccrs.PlateCarree(), fontsize=12, verticalalignment='center')
 
     # Set the extent of the map
     ax.set_extent([-10.5, -5, 51, 55], crs=ccrs.PlateCarree())
@@ -35,3 +40,4 @@ def plot_weather_stations():
 
 if __name__ == "__main__":
     plot_weather_stations()
+

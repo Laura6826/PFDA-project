@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 def plot_histograms(dfrp, dfs, dfca):
     sns.set_theme(style="darkgrid")
-    fig, axs = plt.subplots(4, 3, figsize=(18, 10))
+    fig, axs = plt.subplots(3, 3, figsize=(18, 10))
 
     # Plot histograms for rainfall (mm)
     sns.histplot(data=dfrp, x="rain", kde=True, color="blue", bins=30, ax=axs[0, 0])
@@ -63,28 +63,8 @@ def plot_histograms(dfrp, dfs, dfca):
     axs[2, 2].set_ylabel('Frequency')
     axs[2, 2].set_xlim(0, 60)
 
-    # Plot histograms for wind direction (degrees)
-    sns.histplot(data=dfrp, x="wddir", kde=True, color="blue", bins=30, ax=axs[3, 0])
-    axs[3, 0].set_title('Roches Point')
-    axs[3, 0].set_xlabel('Wind Direction (degrees)')
-    axs[3, 0].set_ylabel('Frequency')
-    axs[3, 0].set_xlim(0, 360)
-
-    sns.histplot(data=dfs, x="wddir", kde=True, color="purple", bins=30, ax=axs[3, 1])
-    axs[3, 1].set_title('Sherkin Island')
-    axs[3, 1].set_xlabel('Wind Direction (degrees)')
-    axs[3, 1].set_ylabel('Frequency')
-    axs[3, 1].set_xlim(0, 360)
-
-    sns.histplot(data=dfca, x="wddir", kde=True, color="violet", bins=30, ax=axs[3, 2])
-    axs[3, 2].set_title('Cork Airport')
-    axs[3, 2].set_xlabel('Wind Direction (degrees)')
-    axs[3, 2].set_ylabel('Frequency')
-    axs[3, 2].set_xlim(0, 360)
-
     # Add an overall title to the figure
     fig.suptitle('Figure 3.1: Histograms with gaussian curves for each variable at the 3 weather stations', fontsize=16, fontweight='bold', color= 'orange')
     plt.tight_layout(rect=[0, 0, 1, 0.95])
-    plt.savefig('Figure3.1.png')
     plt.show()
 

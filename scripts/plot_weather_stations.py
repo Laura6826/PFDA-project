@@ -4,7 +4,7 @@ import cartopy.feature as cfeature
 
 def plot_weather_stations():
     # Create a figure and an axis with a specific projection
-    fig, ax = plt.subplots(figsize=(5,5), subplot_kw={'projection': ccrs.PlateCarree()})
+    fig, ax = plt.subplots(figsize=(8,7), subplot_kw={'projection': ccrs.PlateCarree()})
 
     # Add coastlines and borders
     ax.add_feature(cfeature.COASTLINE)

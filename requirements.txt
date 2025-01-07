@@ -1,0 +1,12 @@
+pandas
+numpy
+matplotlib.pyplot
+matplotlib.colors
+seaborn
+datetime
+cartopy.colors
+cartopy.feature
+scipy.stats
+sklearn.preprocessing
+windrose
+skikit-learn

@@ -19,8 +19,7 @@ This README file was written using the [GitHub's documentation on READMEs](https
 1. [The purpose of this project.](#2-the-purpose-of-this-project)
 1. [How to get started.](#3-how-to-get-started)
 1. [How to get help.](#4-how-to-get-help)
-1. [How to contribute.](#5-how-to-contribute)
-1. [Weekly Assignment.](#6-weekly-assignments)
+Updated 1. [How to contribute.](#5-how-to-contribute)
 
 ## 1. Introduction
 
@@ -83,11 +82,21 @@ pip install -r requirements.txt
 ,or you can manually install each of the libraries below.+
 
 ```ruby
-  import pandas as pd
-  import numpy as np
-  import matplotlib.pyplot as plt
-  import seaborn as sns
-  import scipy
+import sys
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+import seaborn as sns
+import datetime as dt
+import cartopy.crs as ccrs
+import cartopy.feature as cfeature
+import scipy.stats as stats
+from scipy.stats import zscore
+from scipy.stats import shapiro
+from scipy.stats import boxcox
+from sklearn.preprocessing import PowerTransformer
+from windrose import WindroseAxes
 ```
 
 ***

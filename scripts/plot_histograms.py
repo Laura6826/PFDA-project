@@ -67,4 +67,3 @@ def plot_histograms(dfrp, dfs, dfca):
     fig.suptitle('Figure 3.1: Histograms with gaussian curves for each variable at the 3 weather stations', fontsize=16, fontweight='bold', color= 'orange')
     plt.tight_layout(rect=[0, 0, 1, 0.95])
     plt.show()
-

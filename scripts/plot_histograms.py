@@ -66,4 +66,5 @@ def plot_histograms(dfrp, dfs, dfca):
     # Add an overall title to the figure
     fig.suptitle('Figure 3.1: Histograms with gaussian curves for each variable at the 3 weather stations', fontsize=16, fontweight='bold', color= 'orange')
     plt.tight_layout(rect=[0, 0, 1, 0.95])
+    plt.savefig('images/figure3.1.histograms.png')
     plt.show()

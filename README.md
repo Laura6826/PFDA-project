@@ -91,12 +91,19 @@ import seaborn as sns
 import datetime as dt
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
+from windrose import WindroseAxes
 import scipy.stats as stats
 from scipy.stats import zscore
 from scipy.stats import shapiro
 from scipy.stats import boxcox
 from sklearn.preprocessing import PowerTransformer
-from windrose import WindroseAxes
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import mean_squared_error
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense
 ```
 
 ***

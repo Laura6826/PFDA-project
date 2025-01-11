@@ -3,6 +3,7 @@ pandas
 numpy 
 matplotlib.pyplot 
 matplotlib.colors
+matplotlib.ticker import MaxNLocator
 seaborn
 datetime
 cartopy.crs
